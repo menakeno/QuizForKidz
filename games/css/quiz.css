@@ -1,0 +1,47 @@
+:root {
+  --secondary: #7b809a;
+  --warning: #fb8c00;
+  --success: #4caf50;
+  --danger: #f44335;
+  --white: #ffffff;
+}
+
+.choice-container {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.choice-container:hover {
+  background-color: var(--warning);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.correct {
+  background-color: var(--success) !important;
+}
+
+.incorrect {
+  background-color: var(--danger) !important;
+  animation: shake 0.3s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    margin-left: 0;
+  }
+  20%,
+  80% {
+    margin-left: -6px;
+  }
+  40%,
+  60% {
+    margin-left: 6px;
+  }
+}
+
+#progressBarFull {
+  /**width: 90%;**/
+  width: 0;
+}
